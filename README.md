@@ -79,6 +79,6 @@ Your model will be saved in `runs/{your model name}/`.You can also try to use ot
 
 ## Testing
 We provide a pre-trained model in `runs/Type_Specific_Fashion_Compatibility/origin/`, you can run:<br>
-`python main.py --test --use_fc --resume runs/Type_Specific_Fashion_Compatibility/origin/model_best.pth.tar`
+`python main.py --test --resume runs/Type_Specific_Fashion_Compatibility/origin/model_best.pth.tar`
 Or you can test your own trained model. The code will produce two txt files `result_choose.txt` and `result_compatibility.txt`.<br>
 We also provide two small python files to show our test questions. You can run `python show_choose/compatibility.py --idx {index of questions you want to visualize}` and then compared to the txt file.
