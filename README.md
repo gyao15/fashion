@@ -11,8 +11,7 @@ This dataset consists of 68,306 outfits and their meta data crawled from the pol
   Year = {2018}<br>
 }`
 ### Dataset Splits
-
-In our paper we describe two versions of the data:
+Two versions of the data:
 
 Polyvore Outfits (nondisjoint) - Outfits are split at random, which means some
 items (but not complete outfits) may be seen in both training and test splits.
@@ -49,17 +48,14 @@ answer pairs, and also identifies the "index" of the item in the outfit in
 "blank_position".  Since the set_id is used in the item identifiers, the
 correct answer can be determined by matching the set_id in the question
 elements with the set_id in the answers.
-
-
+`We use the disjoint one to train our model`
 
 ### Maryland Polyvore Test Data
 
-We provide the fashion compatibility and fill-in-the-blank test data we used in
-our paper.  This data is more difficult than those used in the original paper
+It provides the fashion compatibility and fill-in-the-blank test data.
+This data is more difficult than those used in the original paper
 because they replace items of the same type when creating negatives rather than
-those sampled at random provided with the Maryland Polyvore dataset.  See our
-paper for more details.
-
+those sampled at random provided with the Maryland Polyvore dataset. 
 
 
 ### Images and Meta-Data
