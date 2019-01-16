@@ -1,7 +1,5 @@
-Fashion
-===================
-Dataset
--------------------
+#Fashion
+##Dataset
 The whole data can be downloaded from https://cloud.tsinghua.edu.cn/d/defcceb1988841058098/ . <br>
 This dataset consists of 68,306 outfits and their meta data crawled from the polyvore website. It is provided by the paper we refer to.<br>
 `@inproceedings{VasilevaECCV18FashionCompatibility,<br>
@@ -47,7 +45,7 @@ contains an array of dictionaries.  These dictionaries contain the question/
 answer pairs, and also identifies the "index" of the item in the outfit in
 "blank_position".  Since the set_id is used in the item identifiers, the
 correct answer can be determined by matching the set_id in the question
-elements with the set_id in the answers.
+elements with the set_id in the answers.<br>
 `We use the disjoint one to train our model`
 
 ### Maryland Polyvore Test Data
@@ -71,3 +69,16 @@ and the values are its associated meta-data labels.
 
 categories.csv - Each row contains three items: (category_id, fine-grained
 category, semantic category)
+
+## Training
+You can see a listing and description of the model options with:<br>
+`python main.py --help`
+If you want to train a new model, you can run:<br>
+`python main.py --learned --l2_embed --datadir {your data directory} --name {your model name}`
+Your model will be saved in `runs/{your model name}/`.You can also try to use other options. Here we just show what we used.<br>
+
+## Testing
+We provide a pre-trained model in `runs/Type_Specific_Fashion_Compatibility/origin/`, you can run:<br>
+`python main.py --test --use_fc --resume runs/Type_Specific_Fashion_Compatibility/origin/model_best.pth.tar`
+Or you can test your own trained model. The code will produce two txt files `result_choose.txt` and `result_compatibility.txt`.<br>
+We also provide two small python files to show our test questions. You can run `python show_choose/compatibility.py --idx {index of questions you want to visualize}` and then compared to the txt file.
