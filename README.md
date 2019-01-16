@@ -1,5 +1,5 @@
-#Fashion
-##Dataset
+# Fashion
+## Dataset
 The whole data can be downloaded from https://cloud.tsinghua.edu.cn/d/defcceb1988841058098/ . <br>
 This dataset consists of 68,306 outfits and their meta data crawled from the polyvore website. It is provided by the paper we refer to.<br>
 `@inproceedings{VasilevaECCV18FashionCompatibility,<br>
